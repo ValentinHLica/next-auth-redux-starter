@@ -1,0 +1,48 @@
+@import "../../variables";
+@import "../../utils/typography";
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: $black-15;
+  max-height: 64px;
+  min-height: 64px;
+
+  .container__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $black-90;
+    max-width: $screen-width;
+    width: 100%;
+    margin: auto;
+    padding: 0 16px;
+
+    .container__logo {
+      .brand__title {
+      }
+    }
+
+    .container__nav {
+      .nav__menu {
+        display: flex;
+        align-items: center;
+
+        .menu__item {
+          .item__link {
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.1s ease;
+            cursor: pointer;
+
+            @include typography(16px, 400, 28px, 0, center);
+
+            &:hover {
+              background-color: $black-25;
+            }
+          }
+        }
+      }
+    }
+  }
+}

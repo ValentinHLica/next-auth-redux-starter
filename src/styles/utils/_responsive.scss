@@ -1,0 +1,34 @@
+$mobile-small: 320px;
+$mobile-large: 576px;
+$tablet: 768px;
+$pc-small: 992px;
+$pc: 1200px;
+$pc-large: 1600px;
+
+@mixin responsive($media) {
+  @if $media==mobile-small {
+    @media only screen and (min-width: $mobile-small) {
+      @content;
+    }
+  } @else if $media==mobile-large {
+    @media only screen and (min-width: $mobile-large) {
+      @content;
+    }
+  } @else if $media==tablet {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $media==pc-small {
+    @media only screen and (min-width: $pc-small) {
+      @content;
+    }
+  } @else if $media==pc {
+    @media only screen and (min-width: $pc) {
+      @content;
+    }
+  } @else if $media==pc-large {
+    @media only screen and (min-width: $pc-large) {
+      @content;
+    }
+  }
+}
